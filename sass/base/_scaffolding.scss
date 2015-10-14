@@ -22,7 +22,7 @@ body {
 
 .container {
   @include outer-container();
-  @include pad(0 ceil($gutter / 2));
+  @include pad(0 ceil($gutter));
   @include media($bp-tablet-up) {
     @include pad(0 ceil($gutter));
   }

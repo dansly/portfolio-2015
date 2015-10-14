@@ -66,7 +66,7 @@
 
 
 .about-content--wrap {
-     padding-top: ($lh-baseline * 18);
+padding-top: ($lh-baseline * 18);
   @include media($bp-tablet-up) {
   padding-top: ($lh-baseline * 26);
   }
