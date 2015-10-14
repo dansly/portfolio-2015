@@ -1,0 +1,16 @@
+$white: hsl(0, 0, 100);
+$grey-base: hsb(206, 14, 30, 0.9);
+$grey-light: hsb(206, 14, 30, 0.5);
+$grey-lightest: hsb(206, 14, 30, 0.15);
+$grey-dark-overlay: hsb(206, 14, 15, 0.75);
+
+
+
+// Text Colour
+$text-color:  $grey-base;
+$text-muted:  $grey-light;
+$link-color:  $grey-base;
+$link-hover-color:  $grey-light;
+
+// Link underline colour
+$link-underline: hsb(240, 36, 98, 1);

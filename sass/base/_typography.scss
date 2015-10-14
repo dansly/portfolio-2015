@@ -1,0 +1,139 @@
+html {
+  font-size: 100%;
+}
+
+html,
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    color: $text-color;
+    font-family: $font-family-base;
+}
+
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 0;
+  margin-bottom: ($lh-baseline * 3);
+  font-weight: normal;
+}
+
+// Headings Sizes
+h1, .h1 {
+  @include fs($fs-5);
+  @include lh(11);
+}
+h2, .h2 {
+  @include fs($fs-4);
+  @include lh(10);
+}
+h3, .h3 {
+  @include fs($fs-3);
+  @include lh(7);
+}
+h4, .h4 {
+  @include fs($fs-2);
+  @include lh(6);
+}
+h5, .h5 {
+  @include fs($fs-1);
+  @include lh(5);
+}
+h6, .h6 {
+  @include fs(1);
+  @include lh(4);
+}
+
+
+// Body text
+// -------------------------
+
+p {
+  margin: 0 0 ($lh-baseline * 4);
+  @include lh(4);
+}
+
+.lead {
+  @include fs($fs-1);
+  @include lh(5);
+}
+
+
+
+
+// Links
+// -------------------------
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+  }
+
+  &:focus {
+  }
+}
+
+// Emphasis & misc
+// -------------------------
+
+// Ex: (12px small font / 14px base font) * 100% = about 85%
+small,
+.small {
+  font-size: floor($fs-base * 0.8);
+}
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+// Transformation
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
+
+// Contextual colors
+.text-muted {
+  color: $text-muted;
+}
+
+
+// Lists
+// -------------------------
+
+// Unordered and Ordered lists
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: ($lh-baseline * 4);
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+// List options
+.list-unstyled {
+  @include list-unstyled;
+}
+
+
+// Inline turns list items into inline-block
+.list-inline {
+  @include list-unstyled;
+  margin-left: -5px;
+}
+.list-inline  > li {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+}

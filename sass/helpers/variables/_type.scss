@@ -1,0 +1,23 @@
+// Font families
+$font-family-base:  "europa-n4", "europa", Helvetica, Arial, sans-serif;
+$font-family-base-light:  "europa-n3", "europa", Helvetica, Arial, sans-serif;
+$font-family-base-bold:  "europa-n7", "europa", Helvetica, Arial, sans-serif;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+
+// Base font size
+$fs-base: 15px;
+
+// Font scale
+$fs-1: 1.250; // ~19px
+$fs-2: 1.563; // ~24px
+$fs-3: 1.953; // ~30px
+$fs-4: 2.441; // ~37px
+$fs-5: 3.051; // ~46px
+
+
+// Set baseline grid / Lineheight mixin base value
+$lh-baseline: 5px;

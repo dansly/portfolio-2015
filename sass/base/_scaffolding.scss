@@ -1,0 +1,33 @@
+::-moz-selection { background: $link-underline; }
+::selection { background: $link-underline;}
+
+
+
+html,
+body{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: $font-family-base;
+  font-size: $fs-base;
+  @include lh(3);
+}
+
+.container {
+  @include outer-container();
+  @include pad(0 ceil($gutter / 2));
+  @include media($bp-tablet-up) {
+    @include pad(0 ceil($gutter));
+  }
+  @include media($bp-desktop-up) {
+    @include pad(0 ceil($gutter * 2));
+  }
+}
+

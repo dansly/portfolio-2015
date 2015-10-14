@@ -1,0 +1,159 @@
+// Centring mixin
+@mixin centre-parent {
+  position: relative;
+}
+
+@mixin centre-child($pos:both) {
+  position: absolute;
+  @if ($pos==both) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  } @else if ($pos==top) {
+    left: 50%;
+    transform: translate(-50%, 0);
+
+  } @else if ($pos==left) {
+    top: 50%;
+    transform: translate(0, -50%);
+  } @else if ($pos==right) {
+    top: 50%;
+    right:0;
+    transform: translate(0, -50%);
+  } @else if ($pos==bottom) {
+    bottom: 0;
+    left:50%;
+    transform: translate(-50%, 0);
+  }
+}
+// End centring mixin
+
+
+// Full page cover mixin
+@mixin page-cover($position) {
+  position: $position;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+// End full page cover mixin
+
+// Opacity mixin
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+// End opacity mixin
+
+
+// Greyscale
+@mixin greyscale {
+    -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+         -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+         -webkit-filter: grayscale(100%);
+         filter: gray;
+         filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+}
+// End greyscale
+
+// Arrows Mixin
+@mixin arrow ($direction, $size, $color) {
+    @if $direction == up {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: $size solid $color;
+    } @else if $direction == down {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size solid $color;
+    } @else if $direction == right {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+    } @else if $direction == left {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right:$size solid $color;
+    }
+}
+//End arrows mixin
+
+
+// Font-size mixin
+@mixin fs($fs-value) {
+  font-size: ceil($fs-base * $fs-value);
+}
+// End font-size mixin
+
+// Line-height mixin
+@mixin lh($lh-value) {
+  line-height: ($lh-baseline * $lh-value);
+}
+// End Line-height mixin
+
+// Unstyled List
+@mixin list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+// End Unstyled List
+
+
+// Medium Style Underlines
+@mixin text-underline-crop($background) {
+  text-shadow:  .03em 0 $background,
+                -.03em 0 $background,
+                0 .03em $background,
+                0 -.03em $background,
+                .06em 0 $background,
+                -.06em 0 $background,
+                .09em 0 $background,
+                -.09em 0 $background,
+                .12em 0 $background,
+                -.12em 0 $background,
+                .15em 0 $background,
+                -.15em 0 $background;
+}
+
+@mixin text-underline($color-bg, $color-text) {
+  background-image: linear-gradient($color-text, $color-text);
+  background-size: 1px 1px;
+  background-repeat: repeat-x;
+  background-position: 0% 95%;
+}
+
+@mixin text-selection($selection) {
+  &::selection {
+    @include text-underline-crop($selection);
+    background: $selection;
+  }
+
+  &::-moz-selection {
+    @include text-underline-crop($selection);
+    background: $selection;
+  }
+}
+
+@mixin link-underline($background, $text-underline, $selection){
+  @include text-underline-crop($background);
+  @include text-underline($background, $text-underline);
+  @include text-selection($selection);
+
+  text-decoration: none;
+
+  *,
+  *:after,
+  &:after,
+  *:before,
+  &:before {
+    text-shadow: none;
+  }
+
+  &:visited {
+  }
+}
+
+// End medium style underlines

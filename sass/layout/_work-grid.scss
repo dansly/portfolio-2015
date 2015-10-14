@@ -1,0 +1,28 @@
+.work-grid {
+ @include row();
+}
+
+.work-grid a {
+  display: block;
+}
+
+.work-item {
+  width: 100%;
+  float: left;
+  @include media($bp-tablet-up) {
+    width: 50%;
+  }
+}
+
+.work-image {
+  background-image: url("https://unsplash.it/800/450/?random");
+  background-size: cover;
+  background-position:  center;
+  padding-bottom: 60%;
+  transition: all 0.45s ease;
+  @include opacity(1);
+}
+
+.work-grid a:hover .work-image {
+  @include opacity(0.3);
+}

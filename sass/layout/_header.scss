@@ -1,0 +1,102 @@
+.page-header--wrap {
+}
+
+.page-header {
+  @extend .container;
+}
+
+.standfirst-wrapper {
+  padding-top: ($lh-baseline * 35);
+  @include media($bp-tablet-up) {
+  padding-top: ($lh-baseline * 30);
+  }
+}
+
+.standfirst {
+  @include row();
+  transform: translateZ(0);
+}
+
+.standfirst h2 {
+display: block;
+  @include fs($fs-1);
+  @include lh(5);
+  margin-bottom: 0;
+  @include span-columns(5);
+  @include media($bp-tablet-up) {
+    @include span-columns(9);
+  }
+  @include media($bp-desktop-up) {
+    @include span-columns(6);
+  }
+}
+
+.standfirst h1::selection, .standfirst h2::selection { background: $link-underline;}
+
+.standfirst .name {
+display: block;
+clear:both;
+  margin: 0 0 ($lh-baseline * 3);
+  @include fs(1);
+  @include lh(4);
+  color: $grey-light;
+}
+
+.standfirst a {
+  @include link-underline($white, $link-underline, $link-underline);
+}
+
+.subtext {
+  @include fs(1);
+  @include lh(4);
+  color: $grey-light;
+  padding-top: ($lh-baseline * 10);
+  margin-bottom: ($lh-baseline * 9);
+  transition: all 0.4s ease;
+  transform: translateZ(0);
+  @include opacity(0);
+  @include media($bp-tablet-up) {
+  padding-top: ($lh-baseline * 19);
+  }
+}
+
+
+.show {
+    @include opacity(1);
+}
+
+
+.subtext.show {
+   margin-bottom: ($lh-baseline * 13);
+}
+.hide {
+    @include opacity(0);
+}
+
+
+.bar-wrap {
+border-top: 1px solid $grey-lightest;
+border-bottom: 1px solid $grey-lightest;
+}
+
+.page-bar {
+  @extend .container
+}
+
+.page-bar p {
+  margin: 0;
+  @include lh(14);
+  float: left;
+}
+
+.page-bar .arrow {
+  float: right;
+  display: block;
+  line-height: 70px;
+  width: 25px;
+  @include centre-parent();
+}
+
+.arrow svg {
+ transform: translateY(25%);
+}

@@ -1,0 +1,11 @@
+.site-footer {
+  @extend .container;
+  color: $grey-light;
+
+}
+
+.site-footer p {
+  @include lh(20);
+  margin-bottom: 0;
+  margin-top: 5px;
+}
