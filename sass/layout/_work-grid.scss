@@ -12,6 +12,10 @@
   @include media($bp-tablet-up) {
     width: 50%;
   }
+   @include media($bp-xl-desktop-up) {
+    width: 33.33333%;
+    width: calc(100% / 3);
+  }
 }
 
 .work-image {

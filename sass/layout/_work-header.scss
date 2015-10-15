@@ -5,6 +5,7 @@
   padding-bottom: ($lh-baseline * 15);
   @include media($bp-tablet-up) {
   padding-bottom: ($lh-baseline * 30);
+  min-height: 280px;
   }
 }
 

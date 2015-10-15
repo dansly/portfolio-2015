@@ -1,4 +1,5 @@
 .page-header--wrap {
+  position: relative;
 }
 
 .page-header {
@@ -87,6 +88,10 @@ border-bottom: 1px solid $grey-lightest;
   margin: 0;
   @include lh(14);
   float: left;
+}
+
+.page-bar a {
+    @include link-underline($white, $link-underline, $link-underline)
 }
 
 .page-bar .arrow {

@@ -7,11 +7,13 @@ $grid-columns: 6;
 $max-width: 80em;
 
 // Define breakpoints
-$bp-l-desktop: 70em; // 1050px
-$bp-desktop: 48em; // 720px and up
-$bp-tablet: 30em; // 450px and up
+$bp-xl-desktop: 110em; // 1760px
+$bp-l-desktop: 70em; // 1120px
+$bp-desktop: 50em; // 800px and up
+$bp-tablet: 30em; // 480px and up
 
 
+$bp-xl-desktop-up: new-breakpoint(min-width $bp-xl-desktop 12);
 $bp-l-desktop-up: new-breakpoint(min-width $bp-l-desktop 12);
 $bp-desktop-up: new-breakpoint(min-width $bp-desktop 12);
 $bp-tablet-up: new-breakpoint(min-width $bp-tablet 12);
