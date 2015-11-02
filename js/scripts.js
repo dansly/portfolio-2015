@@ -10,11 +10,16 @@ jQuery(document).ready(function($) {
         $('.about-panel').toggleClass("show-about");
         $('.page-fade').toggleClass("faded");
     });
-    $('.navbar-toggle').click(function() {
-        $('.standfirst').toggleClass("hide");
-    });
 });
 
+
+$(document).keypress(function(e) {
+    if (e.keyCode == 27) {
+     $('.about-panel').toggleClass("show-about");
+        $('.page-fade').toggleClass("faded");
+
+    }
+});
 
 
 $( document ).ready(function() {
