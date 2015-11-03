@@ -13,13 +13,13 @@ jQuery(document).ready(function($) {
 });
 
 
-$(document).keypress(function(e) {
+$(document).keydown(function(e) {
     if (e.keyCode == 27) {
-     $('.about-panel').toggleClass("show-about");
-        $('.page-fade').toggleClass("faded");
-
+      $('.about-panel').removeClass("show-about");
+      $('.page-fade').removeClass("faded");
     }
 });
+
 
 
 $( document ).ready(function() {
