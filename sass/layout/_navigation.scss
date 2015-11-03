@@ -37,7 +37,7 @@
   @include lh(10);
   display: inline-block;
   float: left;
-  padding-left: ceil($gutter * 1.5);
+  padding-left: ceil($gutter * 1);
   @include media($bp-tablet-up) {
     @include lh(4);
     padding-left: ceil($gutter * 2);
