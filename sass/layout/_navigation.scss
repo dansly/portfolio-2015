@@ -22,6 +22,7 @@
 
 .nav-logo a {
 //display: inline-block;
+
 }
 
 .nav-links {
@@ -38,10 +39,18 @@
   display: inline-block;
   float: left;
   padding-left: ceil($gutter * 1);
+
   @include media($bp-tablet-up) {
     @include lh(4);
     padding-left: ceil($gutter * 2);
   }
+}
+.nav-links ul li a {
+  transition: all 0.25s ease;
+}
+
+.nav-links ul li a:hover {
+   //@include link-underline($white, $link-underline, $link-underline);
 }
 
 .nav-links ul li:first-child {
