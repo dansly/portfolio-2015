@@ -15,7 +15,7 @@
 
 .project-background-wrap {
   z-index: -500;
-  background: hsb(38, 44, 85, 0.2);
+  background: hsb(38, 25, 90, 0.2);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -25,9 +25,9 @@
 }
 
 .project-background-image {
-  background-image: url("https://unsplash.it/800/450/?random");
+  background-image: url("../img/P_W_bg.png");
   background-size: cover;
   background-position:  top;
   min-height: 100%;
-  @include opacity(0.05);
+  @include opacity(0.03);
 }
