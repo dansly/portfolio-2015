@@ -21,7 +21,7 @@
 .standfirst h2 {
 display: block;
   @include fs($fs-1);
-  @include lh(5);
+  @include lh(6);
   margin-bottom: 0;
   @include span-columns(5);
   @include media($bp-tablet-up) {
