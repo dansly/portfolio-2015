@@ -72,11 +72,12 @@ a {
   text-decoration: none;
   transition: all 0.25s ease;
   &:hover,
-  &:focus {
+  {
     color: $link-hover-color;
   }
 
   &:focus {
+    color: $link-color;
   }
 }
 
