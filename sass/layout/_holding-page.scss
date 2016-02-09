@@ -1,4 +1,8 @@
-
+* {
+  //backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 .content {
     @extend .container;
@@ -29,7 +33,27 @@ i {
     font-weight: 300;
 }
 
+a {
+    @include link-underline($midnight, $link-underline, $link-underline);
+}
+
 }
 
 .content-wrap {
+}
+
+.em {
+letter-spacing: -0.5px;
+}
+
+.arrow {
+  transition: all 0.25s ease-in-out;
+  opacity: 1;
+  padding-left: 0;
+}
+
+.hide {
+    transition: all 0.25s ease-in-out;
+    opacity: 0;
+    padding-left: 10px;
 }

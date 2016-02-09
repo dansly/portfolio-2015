@@ -10,5 +10,10 @@ $(document).ready(function($) {
     startDelay: 1000
   });
 
+ $("#hire").hover(function () {
+    $(".arrow").toggleClass("hide");
+ });
+
 });
+
 
