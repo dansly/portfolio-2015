@@ -1,10 +1,10 @@
-@import "../vendor/neat/neat-helpers"; // or "neat-helpers" when in Rails
+@import "neat/neat-helpers"; // or "neat-helpers" when in Rails
 
 // Change the grid settings
 //$column: 90px;
 //$gutter: 30px;
 $grid-columns: 6;
-$max-width: 80em;
+$max-width: 100%;
 
 // Define breakpoints
 $bp-xl-desktop: 110em; // 1760px

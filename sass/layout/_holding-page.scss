@@ -1,0 +1,35 @@
+
+
+.content {
+    @extend .container;
+
+
+    %holding-type {
+    margin-bottom: ($lh-baseline * 7);
+    font-family: $font-family-base-bold;
+    font-weight: $font-weight-bold;
+    @include fs($fs-1)
+    @include lh(6)
+}
+
+h1 {
+    @extend %holding-type;
+    color: hsla(0, 0, 100, 0.25);
+}
+p {
+    @extend %holding-type;
+    color: $white;
+}
+ul {
+    @extend %holding-type;
+    color: $white;
+}
+i {
+    font-style: normal;
+    font-weight: 300;
+}
+
+}
+
+.content-wrap {
+}

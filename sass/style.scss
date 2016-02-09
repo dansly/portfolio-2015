@@ -1,25 +1,19 @@
-// Import Functions
-@import "helpers/functions";
 // Import Variables
 @import "helpers/variables/colours";
 @import "helpers/variables/type";
 @import "helpers/variables/site-variables";
 
+// Import Functions
+@import "helpers/functions";
 // Import Mixins
 @import "helpers/mixins";
 
 // Import Bourbon
-@import "vendor/bourbon/bourbon";
+@import "bourbon";
 // Import Neat Grid Settings
 @import "helpers/grid-settings";
 // Import Neat
-@import "vendor/neat/neat";
-// Import flickity
-@import "vendor/flickity";
-// Import Baseline
-@import "vendor/baseline";
-
-
+@import 'neat';
 
 
 
@@ -30,14 +24,4 @@
 
 
 // Import Layout Styles
-@import "layout/navigation";
-@import "layout/header";
-@import "layout/footer";
-@import "layout/home-gallery";
-@import "layout/about-panel";
-@import "layout/work-header";
-@import "layout/work-grid";
-@import "layout/work-single";
-
-
-
+@import "layout/holding-page";

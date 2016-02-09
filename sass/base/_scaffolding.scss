@@ -11,6 +11,7 @@ body{
 
 html{
   height: 100%;
+  background: #060C13;
 }
 
 body {
@@ -18,16 +19,17 @@ body {
   font-family: $font-family-base;
   font-size: $fs-base;
   @include lh(3);
+  background: #060C13;
 }
 
 .container {
   @include outer-container();
-  @include pad(0 ceil($gutter));
+  @include pad(ceil($gutter));
   @include media($bp-tablet-up) {
-    @include pad(0 ceil($gutter));
+    @include pad(ceil($gutter * 2));
   }
   @include media($bp-desktop-up) {
-    @include pad(0 ceil($gutter * 2));
+    @include pad(ceil($gutter * 4));
   }
 }
 
